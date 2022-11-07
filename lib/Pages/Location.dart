@@ -1,5 +1,6 @@
-// ignore_for_file: file_names, prefer_const_constructors
+// ignore_for_file: file_names, prefer_const_constructors, avoid_print
 import 'package:flutter/material.dart';
+
 
 class Location extends StatefulWidget {
   const Location({super.key});
@@ -9,6 +10,9 @@ class Location extends StatefulWidget {
 }
 
 class _LocationState extends State<Location> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,23 +23,21 @@ class _LocationState extends State<Location> {
       ),
       body: Container(
         color: Color.fromARGB(250, 190, 190, 200),
-        padding: EdgeInsets.symmetric(horizontal: 7.0,vertical: 7.0),
+        padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 7.0),
         child: Center(
-          child:
-           Column(
-            children: [
-            Card( 
+          child: Column(children: [
+            Card(
               child: ListTile(
                 onTap: () {},
-                title: Text('Egypt - Cairo',style: TextStyle(fontSize: 30),),
+                title: Text(
+                  'Egypt - Cairo',
+                  style: TextStyle(fontSize: 30),
+                ),
                 leading: CircleAvatar(
                   backgroundImage: AssetImage("assets/Images/egypt.png"),
                 ),
               ),
             ),
-        
-          
-        
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/');

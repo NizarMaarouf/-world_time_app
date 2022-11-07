@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {Navigator.pushNamed(context, '/location');},
                 icon: Icon(
                   Icons.edit_location,
                   color: Color.fromARGB(255, 255, 129, 129),
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               SizedBox(
-                height: 200,
+                height: 250,
               ),
               Container(
                 width: double.infinity,
@@ -75,15 +75,6 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-               SizedBox(
-                      height: 30,
-                    ),
-               ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/location');
-            },
-            child: const Text('Launch screen'),
-          ),
             ],
           ),
         ),
